@@ -1,25 +1,43 @@
-# Platformer Game in Python
+# Mario Bros–style Platformer in Python
 
-A simple 2D platformer game inspired by classic Mario-style games. Created as a university project using Python.
+A 2D arcade platformer inspired by the original *Mario Bros.*, written in Python with the [Pyxel](https://github.com/kitao/pyxel) retro game engine. Developed as a two-person university project.
+
+<!-- Add a screenshot or GIF here, e.g. ![Gameplay](docs/gameplay.gif) -->
 
 ## Features
 
-- Basic 2D physics: gravity, jumping, collisions
-- Level design with platforms and hazards
-- Sprite-based graphics (from `assets/`)
-- Modular code structure (`classes/`, `constants.py`, etc.)
-
-## Technologies Used
-
-- Python 3
-- [Pygame](https://www.pygame.org/) (for graphics and game loop)
+- Player movement with gravity, jumping and collision detection against floors and platforms
+- Enemies (turtles, crabs and more) that move across the platforms
+- A POW block, collectible coins, and a three-life system with game over
+- Multiple levels: clearing one advances you to the next
+- Object-oriented structure: one class per game entity (`classes/`), with all tuning values in `constants.py`
 
 ## How to Run
 
-1. Install dependencies:
-   ```bash
-   pip install pygame
+Requires Python 3.
 
-## Collaborators
+```bash
+pip install pyxel
+python main.py
+```
 
-This project was developed in collaboration with a fellow student.
+## Controls
+
+| Key   | Action     |
+|-------|------------|
+| A / D | Move left / right |
+| Space | Jump       |
+
+## Project Structure
+
+- `main.py`: entry point
+- `board.py`: game loop, level setup, lives and spawning
+- `classes/mario.py`: player
+- `classes/NPCs/`: enemies and coins
+- `classes/blocks/`: floors, pipes and the POW block
+- `constants.py`: screen size, hitboxes, sprite coordinates and physics values
+- `assets/sprites.pyxres`: sprite sheet (Pyxel resource file)
+
+## Authors
+
+Developed together with [@Saren75](https://github.com/Saren75).
